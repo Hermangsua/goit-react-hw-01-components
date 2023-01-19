@@ -1,9 +1,11 @@
 import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
+
 function getRandomHexColor() {
   let bgColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   return bgColor;
 }
+
 export const Statistics = ({ title, stats }) => (
   <section className={css.statisticsContainer}>
     {title && <h2 className={css.title}>{title}</h2>}
@@ -21,6 +23,7 @@ export const Statistics = ({ title, stats }) => (
     </ul>
   </section>
 );
+
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
